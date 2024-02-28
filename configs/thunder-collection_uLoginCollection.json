@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "uLoginCollection",
+    "dateExported": "2024-02-28T22:53:17.268Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ef9abe9b-16e0-4af2-a3e5-c6a0b72ce875",
+            "colId": "49196752-0fc1-49ba-adcd-4d2a95f4f615",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:8080/laboratorio_3/v1/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-28T21:43:46.015Z",
+            "modified": "2024-02-28T21:53:26.173Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"jpancho@gmail.com\",\n  \"password\":\"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

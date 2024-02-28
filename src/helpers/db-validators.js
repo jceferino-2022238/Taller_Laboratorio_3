@@ -1,9 +1,16 @@
 import User from '../users/user.model.js'
-
+import Enterprise from '../enterprises/enterprise.model.js'
 export const exEmail = async (email = '') =>{
     const existsEmail = await User.findOne({email});
     if(existsEmail){
         throw new Error(`The email ${email} is already registered`)
+    }
+}
+
+export const eName = async (name = '') =>{
+    const existsEName = await Enterprise.findOne({name});
+    if(existsEName){
+        throw new Error(`The enterprise with name ${name} is already registered`)
     }
 }
 
