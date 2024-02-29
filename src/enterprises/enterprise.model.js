@@ -22,7 +22,7 @@ const EnterpriseSchema = mongoose.Schema({
         required: [true, "Impact level isnt optional"]
     },
     yearsInMarket:{
-        type: String,
+        type: Number,
         required: [true, "Enterprise years in market arent optional"]
     },
     state:{

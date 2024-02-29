@@ -1,39 +1,39 @@
 {
     "client": "Thunder Client",
     "collectionName": "enterprisesCollection",
-    "dateExported": "2024-02-28T23:15:08.022Z",
+    "dateExported": "2024-02-29T04:50:38.569Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "96353859-8139-4335-9b84-18ba1ec045ae",
-            "colId": "ef3f94e9-5325-43cb-be2b-c3a90a776a0a",
+            "_id": "52635df4-517c-4f39-9d1d-5227e832c34b",
+            "colId": "a3da64db-8560-4146-9459-60323cf535ec",
             "containerId": "",
             "name": "enterpriseRegister",
             "url": "http://localhost:8080/laboratorio_3/v1/enterprises",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-28T22:54:12.501Z",
-            "modified": "2024-02-28T23:00:56.364Z",
+            "created": "2024-02-29T04:23:48.021Z",
+            "modified": "2024-02-29T04:47:49.665Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"Clear Ideas2\",\n  \"description\":\"Publishing and Marketing enterprise\",\n  \"country\":\"El Salvador\",\n  \"enterpriseCategory\":\"Marketing\",\n  \"impactLevel\":\"Social impact\",\n  \"yearsInMarket\":\"7 years\"\n}",
+                "raw": "{\n  \"name\":\"D Ideas\",\n  \"description\":\"Publishing and Marketing enterprise\",\n  \"country\":\"El Salvador\",\n  \"enterpriseCategory\":\"Marketing\",\n  \"impactLevel\":\"Social impact\",\n  \"yearsInMarket\":2\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "dddaa4c6-1f9a-4cc6-b7bd-fcdab171b24b",
-            "colId": "ef3f94e9-5325-43cb-be2b-c3a90a776a0a",
+            "_id": "b7066452-aa8d-4ef5-b20b-396ad2a65f9f",
+            "colId": "a3da64db-8560-4146-9459-60323cf535ec",
             "containerId": "",
             "name": "getEnterprises",
-            "url": "http://localhost:8080/laboratorio_3/v1/enterprises?from=0&limit=6",
+            "url": "http://localhost:8080/laboratorio_3/v1/enterprises?from=0&limit=7&sortBy=YEARS",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-28T22:59:06.988Z",
-            "modified": "2024-02-28T23:00:44.346Z",
+            "created": "2024-02-29T04:23:48.022Z",
+            "modified": "2024-02-29T04:49:33.604Z",
             "headers": [],
             "params": [
                 {
@@ -43,7 +43,12 @@
                 },
                 {
                     "name": "limit",
-                    "value": "6",
+                    "value": "7",
+                    "isPath": false
+                },
+                {
+                    "name": "sortBy",
+                    "value": "YEARS",
                     "isPath": false
                 }
             ],
