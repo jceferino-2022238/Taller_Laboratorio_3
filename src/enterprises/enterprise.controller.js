@@ -1,6 +1,6 @@
 import { response, request} from "express";
 import Enterprise from './enterprise.model.js';
-
+import excelJs from 'exceljs'
 export const enterprisesPut = async (req, res = response) =>{
     const { id } = req.params;
     const {_id, name, country, ...rest} = req.body;
@@ -50,4 +50,39 @@ export const enterprisesPost = async (req, res) =>{
         enterprise
     });
 }
+
+export const exportEnterprises = async (req, res) =>{
+    try {
+        let workbook = new excelJs.Workbook();
+
+        const sheet = workbook.addWorksheet("books");
+        sheet.columns = [
+            {header: "ID", key:"_id", width: 25},
+            {header: "Name", key:"name", width: 50},
+            {header: "Description", key:"description", width: 50},
+            {header: "Country", key:"country", width: 50},
+            {header: "EnterpriseCategory", key:"enterpriseCategory", width: 50},
+            {header: "ImpactLevel", key:"impactLevel", width: 50},
+            {header: "YearsInMarket", key:"yearsInMarket", width: 50}
+        ]
+        const enterprises = await Enterprise.find({});
+
+        enterprises.forEach(enterprise =>{
+            sheet.addRow(enterprise.toObject());
+        })
+
+        const buffer = await workbook.xlsx.writeBuffer();
+
+        res.setHeader("Content-Type","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+        res.setHeader("Content-Disposition","attatchment: filename=enterprisesData.xlsx");
+        res.status(200).send(buffer);
+    } catch (e) {
+        console.log(e),
+        res.status(400).json({
+            msg: 'Could not complete the process'
+        }) 
+    }
+}
+
+
 

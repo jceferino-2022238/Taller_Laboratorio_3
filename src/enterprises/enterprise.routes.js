@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { enterprisesGet, enterprisesPost, enterprisesPut } from "./enterprise.controller.js";
+import { enterprisesGet, enterprisesPost, enterprisesPut, exportEnterprises } from "./enterprise.controller.js";
 import { eName, exEById } from "../helpers/db-validators.js";
 import { validateFields } from "../middlewares/validateFields.js";
 
@@ -28,5 +28,9 @@ router.put(
         check("id").custom(exEById),
         validateFields
     ], enterprisesPut);
+
+router.get(
+    "/exportEnterprises",
+    exportEnterprises);
 export default router;
 

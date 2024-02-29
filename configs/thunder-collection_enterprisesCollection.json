@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "enterprisesCollection",
-    "dateExported": "2024-02-29T05:53:10.713Z",
+    "dateExported": "2024-02-29T08:47:49.211Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -71,6 +71,20 @@
                 "raw": "{\n  \"description\":\"Publishing and Marketing enterprise, comunication and social media oriented\",\n  \"enterpriseCategory\":\"Marketing in social media\",\n  \"impactLevel\":\"Social impact\",\n  \"yearsInMarket\":\"8\"\n}",
                 "form": []
             },
+            "tests": []
+        },
+        {
+            "_id": "b9f6c22b-1bf7-4eab-bf37-93b697c2d33c",
+            "colId": "a3da64db-8560-4146-9459-60323cf535ec",
+            "containerId": "",
+            "name": "excelEnterprises",
+            "url": "http://localhost:8080/laboratorio_3/v1/enterprises/exportEnterprises",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-29T07:03:35.430Z",
+            "modified": "2024-02-29T07:05:10.105Z",
+            "headers": [],
+            "params": [],
             "tests": []
         }
     ]
