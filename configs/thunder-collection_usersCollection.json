@@ -1,39 +1,39 @@
 {
     "client": "Thunder Client",
     "collectionName": "usersCollection",
-    "dateExported": "2024-02-27T23:17:28.742Z",
+    "dateExported": "2024-02-29T09:14:00.256Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "96d4fec2-e584-4603-8e5c-646e56a70914",
-            "colId": "97a89bdd-ee1e-4e34-8e72-124598093bd2",
+            "_id": "f6a703f9-0a39-4157-9185-77729120c08d",
+            "colId": "a753d23d-b5df-493e-a3b3-d3117fc8f67c",
             "containerId": "",
             "name": "userRegister",
             "url": "http://localhost:8080/laboratorio_3/v1/users",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-27T22:47:53.650Z",
-            "modified": "2024-02-27T23:13:09.273Z",
+            "created": "2024-02-29T04:23:48.066Z",
+            "modified": "2024-02-29T09:05:05.486Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"José Pancho\",\n  \"email\":\"jpancho@gmail.com\",\n  \"password\":\"123456\"\n}",
+                "raw": "{\n  \"name\":\"José Juárez\",\n  \"email\":\"jjuarez@gmail.com\",\n  \"password\":\"123456\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "c8ac82ac-4b0b-4dd4-a1f8-50efe683b15a",
-            "colId": "97a89bdd-ee1e-4e34-8e72-124598093bd2",
+            "_id": "82baccb0-80a8-4faa-8b34-6e18325aede9",
+            "colId": "a753d23d-b5df-493e-a3b3-d3117fc8f67c",
             "containerId": "",
             "name": "getUsers",
-            "url": "http://localhost:8080/laboratorio_3/v1/users?from=0&limit=6",
+            "url": "http://localhost:8080/laboratorio_3/v1/users?from=0&limit=2",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-27T22:48:04.025Z",
-            "modified": "2024-02-27T23:16:03.834Z",
+            "created": "2024-02-29T04:23:48.067Z",
+            "modified": "2024-02-29T09:13:26.457Z",
             "headers": [],
             "params": [
                 {
@@ -43,7 +43,7 @@
                 },
                 {
                     "name": "limit",
-                    "value": "6",
+                    "value": "2",
                     "isPath": false
                 }
             ],

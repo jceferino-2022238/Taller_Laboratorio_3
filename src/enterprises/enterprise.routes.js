@@ -3,14 +3,23 @@ import { check } from "express-validator";
 import { enterprisesGet, enterprisesPost, enterprisesPut, exportEnterprises } from "./enterprise.controller.js";
 import { eName, exEById } from "../helpers/db-validators.js";
 import { validateFields } from "../middlewares/validateFields.js";
+import { validateJWT } from "../middlewares/validate-jwt.js";
+import { isAdminRole } from "../middlewares/role-validation.js";
 
 const router = Router();
 
-router.get("/", enterprisesGet);
+router.get(
+    "/",
+    [
+        validateJWT,
+        isAdminRole,
+    ], enterprisesGet);
 
 router.post(
     "/",
     [
+        validateJWT,
+        isAdminRole,
         check("name", "Name isnt optional").not().isEmpty(),
         check("name").custom(eName),
         check("description", "Description isnt optional").not().isEmpty(),
@@ -24,6 +33,8 @@ router.post(
 router.put(
     "/:id",
     [
+        validateJWT,
+        isAdminRole,
         check("id", "Not valid ID").isMongoId(),
         check("id").custom(exEById),
         validateFields
@@ -31,6 +42,9 @@ router.put(
 
 router.get(
     "/exportEnterprises",
-    exportEnterprises);
+    [
+        validateJWT,
+        isAdminRole
+    ], exportEnterprises);
 export default router;
 

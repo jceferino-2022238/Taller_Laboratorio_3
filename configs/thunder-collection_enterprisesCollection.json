@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "enterprisesCollection",
-    "dateExported": "2024-02-29T08:47:49.211Z",
+    "dateExported": "2024-02-29T09:13:33.678Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,17 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-02-29T04:23:48.021Z",
-            "modified": "2024-02-29T04:47:49.665Z",
-            "headers": [],
+            "modified": "2024-02-29T09:06:34.327Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwNDhjMWMyMGRkZTNmYjI0OGM5OGYiLCJpYXQiOjE3MDkxOTc1MzIsImV4cCI6MTcwOTIwMTEzMn0.ajFengCWayDyxTPPzEAHbXmfEcjmTdSpCSs_eVEjCbc"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"D Ideas\",\n  \"description\":\"Publishing and Marketing enterprise\",\n  \"country\":\"El Salvador\",\n  \"enterpriseCategory\":\"Marketing\",\n  \"impactLevel\":\"Social impact\",\n  \"yearsInMarket\":2\n}",
+                "raw": "{\n  \"name\":\"GH33 Ideas\",\n  \"description\":\"Publishing and Marketing enterprise\",\n  \"country\":\"El Salvador\",\n  \"enterpriseCategory\":\"Socials\",\n  \"impactLevel\":\"Social impact\",\n  \"yearsInMarket\":\"5\"\n}",
                 "form": []
             },
             "tests": []
@@ -29,12 +34,17 @@
             "colId": "a3da64db-8560-4146-9459-60323cf535ec",
             "containerId": "",
             "name": "getEnterprises",
-            "url": "http://localhost:8080/laboratorio_3/v1/enterprises?from=0&limit=5&sortBy=YEARS",
+            "url": "http://localhost:8080/laboratorio_3/v1/enterprises?from=0&limit=5&sortBy=AZ",
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-02-29T04:23:48.022Z",
-            "modified": "2024-02-29T05:52:52.428Z",
-            "headers": [],
+            "modified": "2024-02-29T09:10:44.278Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwNDhjMWMyMGRkZTNmYjI0OGM5OGYiLCJpYXQiOjE3MDkxOTc1MzIsImV4cCI6MTcwOTIwMTEzMn0.ajFengCWayDyxTPPzEAHbXmfEcjmTdSpCSs_eVEjCbc"
+                }
+            ],
             "params": [
                 {
                     "name": "from",
@@ -48,7 +58,7 @@
                 },
                 {
                     "name": "sortBy",
-                    "value": "YEARS",
+                    "value": "AZ",
                     "isPath": false
                 }
             ],
@@ -59,12 +69,17 @@
             "colId": "a3da64db-8560-4146-9459-60323cf535ec",
             "containerId": "",
             "name": "putEnterprise",
-            "url": "http://localhost:8080/laboratorio_3/v1/enterprises/65e00c75bd1313ccc61f9eb7",
+            "url": "http://localhost:8080/laboratorio_3/v1/enterprises/65e0491ac20dde3fb248c994",
             "method": "PUT",
             "sortNum": 30000,
             "created": "2024-02-29T05:31:17.974Z",
-            "modified": "2024-02-29T05:50:14.411Z",
-            "headers": [],
+            "modified": "2024-02-29T09:08:03.621Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwNDhjMWMyMGRkZTNmYjI0OGM5OGYiLCJpYXQiOjE3MDkxOTc1MzIsImV4cCI6MTcwOTIwMTEzMn0.ajFengCWayDyxTPPzEAHbXmfEcjmTdSpCSs_eVEjCbc"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
@@ -82,8 +97,13 @@
             "method": "GET",
             "sortNum": 40000,
             "created": "2024-02-29T07:03:35.430Z",
-            "modified": "2024-02-29T07:05:10.105Z",
-            "headers": [],
+            "modified": "2024-02-29T09:08:17.274Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwNDhjMWMyMGRkZTNmYjI0OGM5OGYiLCJpYXQiOjE3MDkxOTc1MzIsImV4cCI6MTcwOTIwMTEzMn0.ajFengCWayDyxTPPzEAHbXmfEcjmTdSpCSs_eVEjCbc"
+                }
+            ],
             "params": [],
             "tests": []
         }
