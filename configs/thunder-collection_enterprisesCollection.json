@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "enterprisesCollection",
-    "dateExported": "2024-02-29T04:50:38.569Z",
+    "dateExported": "2024-02-29T05:53:10.713Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -29,11 +29,11 @@
             "colId": "a3da64db-8560-4146-9459-60323cf535ec",
             "containerId": "",
             "name": "getEnterprises",
-            "url": "http://localhost:8080/laboratorio_3/v1/enterprises?from=0&limit=7&sortBy=YEARS",
+            "url": "http://localhost:8080/laboratorio_3/v1/enterprises?from=0&limit=5&sortBy=YEARS",
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-02-29T04:23:48.022Z",
-            "modified": "2024-02-29T04:49:33.604Z",
+            "modified": "2024-02-29T05:52:52.428Z",
             "headers": [],
             "params": [
                 {
@@ -43,7 +43,7 @@
                 },
                 {
                     "name": "limit",
-                    "value": "7",
+                    "value": "5",
                     "isPath": false
                 },
                 {
@@ -52,6 +52,25 @@
                     "isPath": false
                 }
             ],
+            "tests": []
+        },
+        {
+            "_id": "475f272e-186a-44dd-b6c1-e2ec99976243",
+            "colId": "a3da64db-8560-4146-9459-60323cf535ec",
+            "containerId": "",
+            "name": "putEnterprise",
+            "url": "http://localhost:8080/laboratorio_3/v1/enterprises/65e00c75bd1313ccc61f9eb7",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-02-29T05:31:17.974Z",
+            "modified": "2024-02-29T05:50:14.411Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"description\":\"Publishing and Marketing enterprise, comunication and social media oriented\",\n  \"enterpriseCategory\":\"Marketing in social media\",\n  \"impactLevel\":\"Social impact\",\n  \"yearsInMarket\":\"8\"\n}",
+                "form": []
+            },
             "tests": []
         }
     ]

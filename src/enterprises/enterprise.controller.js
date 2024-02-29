@@ -1,6 +1,18 @@
 import { response, request} from "express";
 import Enterprise from './enterprise.model.js';
 
+export const enterprisesPut = async (req, res = response) =>{
+    const { id } = req.params;
+    const {_id, name, country, ...rest} = req.body;
+    await Enterprise.findByIdAndUpdate(id, rest);
+
+    const enterprise = await Enterprise.findOne({_id: id});
+    res.status(200).json({
+        msg: "Entreprise Updated",
+        enterprise
+    })
+}
+
 export const enterprisesGet = async (req = request, res = response) => {
     const {limit, from, sortBy} = req.query;
     const query = {state: true};
@@ -38,3 +50,4 @@ export const enterprisesPost = async (req, res) =>{
         enterprise
     });
 }
+

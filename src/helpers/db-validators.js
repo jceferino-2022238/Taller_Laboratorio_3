@@ -20,3 +20,10 @@ export const exUserById = async (id = '') => {
         throw new Error(`Id ${email} doesnt exist`)
     }
 }
+
+export const exEById = async (id = '') =>{
+    const existsEntById = await Enterprise.findById(id);
+    if (!existsEntById){
+        throw new Error(`Id ${name} doesnt exist`)
+    }
+}

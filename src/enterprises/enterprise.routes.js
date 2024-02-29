@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { enterprisesGet, enterprisesPost } from "./enterprise.controller.js";
-import { eName } from "../helpers/db-validators.js";
+import { enterprisesGet, enterprisesPost, enterprisesPut } from "./enterprise.controller.js";
+import { eName, exEById } from "../helpers/db-validators.js";
 import { validateFields } from "../middlewares/validateFields.js";
 
 const router = Router();
@@ -21,5 +21,12 @@ router.post(
         validateFields,
     ], enterprisesPost);
 
+router.put(
+    "/:id",
+    [
+        check("id", "Not valid ID").isMongoId(),
+        check("id").custom(exEById),
+        validateFields
+    ], enterprisesPut);
 export default router;
 
