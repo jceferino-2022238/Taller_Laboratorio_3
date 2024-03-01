@@ -63,6 +63,11 @@ export const enterprisesGet = async (req = request, res = response) => {
     const {limit, from, sortBy} = req.query;
     const query = {state: true};
     let sort
+    if(sortBy == ''){
+        return res.status(401).json({
+            msg: 'Sort cant be null'
+        })
+    }
     if(sortBy == 'AZ'){
         sort = {name: 1}
     }
